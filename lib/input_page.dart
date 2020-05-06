@@ -38,35 +38,35 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: ReusableCard(
+                    colour: selectedGender == Gender.male
+                        ? maleCardColor = activeCardColor
+                        : maleCardColor = inActiveCardColor,
+                    cardChild: TopCardContent(
+                      iconData: FontAwesomeIcons.mars,
+                      text: 'MALE',
+                    ),
+                    onPress: () {
                       setState(() {
                         selectedGender = Gender.male;
                       });
                     },
-                    child: ReusableCard(
-                      colour: selectedGender == Gender.male ? maleCardColor = activeCardColor : maleCardColor = inActiveCardColor,
-                      cardChild: TopCardContent(
-                        iconData: FontAwesomeIcons.mars,
-                        text: 'MALE',
-                      ),
-                    ),
                   ),
                 ),
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: ReusableCard(
+                    colour: selectedGender == Gender.female
+                        ? femaleCardColor = activeCardColor
+                        : femaleCardColor = inActiveCardColor,
+                    cardChild: TopCardContent(
+                      iconData: FontAwesomeIcons.venus,
+                      text: 'FEMALE',
+                    ),
+                    onPress: () {
                       setState(() {
                         selectedGender = Gender.female;
                       });
                     },
-                    child: ReusableCard(
-                      colour: selectedGender == Gender.female ? femaleCardColor = activeCardColor : femaleCardColor = inActiveCardColor,
-                      cardChild: TopCardContent(
-                        iconData: FontAwesomeIcons.venus,
-                        text: 'FEMALE',
-                      ),
-                    ),
                   ),
                 ),
               ],
