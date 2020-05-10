@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'input_page.dart';
+import 'package:bmi_calculator/screens/input_page.dart';
 
 void main() => runApp(BMICalculator());
 
@@ -12,9 +12,15 @@ class BMICalculator extends StatelessWidget {
         primaryColor: Color(0xFF04040C), //#04040C
         accentColor: Colors.red,
         scaffoldBackgroundColor: Color(0xFF04040C),
+        // sliderTheme: SliderTheme.of(context).copyWith(    // All across sliders theme
+        //   activeTrackColor: Colors.white,
+        //   thumbShape: RoundSliderThumbShape(enabledThumbRadius: 15.0),
+        //   overlayShape: RoundSliderOverlayShape(overlayRadius: 30.0),
+        //   thumbColor: Color(0xFFEB1555),
+        //   overlayColor: Color(0x29EB1555),
+        // ),
       ),
       home: InputPage(),
     );
   }
 }
-

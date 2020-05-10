@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:bmi_calculator/constant.dart';
 
-const labelTextStyle = TextStyle(
-  fontSize: 18.0,
-  color: Color(0xFF8D8E98),
-);
 
 const midSizedBox = SizedBox(
   height: 15.0,
@@ -27,7 +24,7 @@ class TopCardContent extends StatelessWidget {
         midSizedBox,
         Text(
           text,
-          style: labelTextStyle,
+          style: kLabelTextStyle,
         ),
       ],
     );
